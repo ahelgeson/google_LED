@@ -30,8 +30,6 @@ try:
     while RUNNING:
         for x in range(0, 8):
             GPIO.output(led_list[x], GPIO.HIGH)
-            time.sleep(0.25)
-            GPIO.output(led_list[x], GPIO.LOW)
         for x in range(7, 0, -1):
             GPIO.output(led_list[x], GPIO.HIGH)
             time.sleep(0.25)
