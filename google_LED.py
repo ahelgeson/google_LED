@@ -13,7 +13,7 @@ import RPi.GPIO as GPIO
 RUNNING = True
 
 # Define LED list and statically set the 6 GPIO pin numbers
-led_list = [16, 12, 25, 24, 23, 18]
+led_list = [16, 25, 24, 23, 27, 17]
  
 # Set the GPIO to a BCM numbering scheme and set pins to output mode
 GPIO.setmode(GPIO.BCM)
@@ -30,7 +30,7 @@ try:
         for x in range(0, 6):
             GPIO.output(led_list[x], GPIO.HIGH)
             time.sleep(0.7)
-        for x in range(5, 0, -1):
+        for x in range(6, 0, -1):
             time.sleep(0.25)
             GPIO.output(led_list[x], GPIO.LOW)
  
